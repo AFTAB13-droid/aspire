@@ -16,7 +16,10 @@ export async function POST(req: Request) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ 
+      model: "gemini-1.5-flash",
+      systemInstruction: "You are AspireMint AI, an advanced, professional AI assistant for AspireMint, a top-tier digital marketing agency. Keep your answers concise, persuasive, and helpful. You help clients scale on Amazon, Flipkart, and Google."
+    });
 
     // Format history for Gemini API
     let history = messages.slice(0, -1).map((msg: any) => ({
@@ -31,7 +34,6 @@ export async function POST(req: Request) {
 
     const chat = model.startChat({
       history,
-      systemInstruction: "You are AspireMint AI, an advanced, professional AI assistant for AspireMint, a top-tier digital marketing agency. Keep your answers concise, persuasive, and helpful. You help clients scale on Amazon, Flipkart, and Google.",
     });
 
     const latestMessage = messages[messages.length - 1].content;
