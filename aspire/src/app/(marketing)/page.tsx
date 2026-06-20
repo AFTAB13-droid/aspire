@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import dynamic from "next/dynamic";
 
 const Interactive3D = dynamic(() => import("@/components/Interactive3D"), { ssr: false });
+const MobileHome = dynamic(() => import("@/components/MobileHome"), { ssr: false });
 
 // Modern Magnetic Button Effect
 const MagneticButton = ({ children, className }: { children: React.ReactNode, className?: string }) => {
@@ -64,6 +65,8 @@ export default function Home() {
   };
 
   return (
+    <>
+    <div className="desktop-only">
     <div ref={containerRef}>
       {/* Dynamic Hero Section */}
       <section className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
@@ -207,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Infinite Scroll Marquee */}
-      <section style={{ padding: '3rem 0', background: 'var(--primary-yellow)', color: 'var(--bg-black)', overflow: 'hidden', transform: 'rotate(-2deg) scale(1.05)', marginTop: '4rem' }}>
+      <section style={{ padding: '3rem 0', background: 'var(--primary-yellow)', color: 'var(--bg-black)', overflow: 'hidden', transform: 'rotate(-2deg) scale(1.05)', marginTop: '4rem', position: 'relative', zIndex: 30 }}>
         <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
           <motion.div 
             animate={{ x: ["0%", "-50%"] }}
@@ -216,6 +219,32 @@ export default function Home() {
           >
             <span>+300% ROI AVERAGE</span> • <span>100+ BRANDS SCALED</span> • <span>#1 RANKINGS</span> • <span>MILLIONS MANAGED</span> •
             <span>+300% ROI AVERAGE</span> • <span>100+ BRANDS SCALED</span> • <span>#1 RANKINGS</span> • <span>MILLIONS MANAGED</span> •
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Refined Brand Marquee */}
+      <section style={{ padding: '4rem 0', overflow: 'hidden', background: 'linear-gradient(90deg, rgba(15,15,15,0.95), rgba(5,5,5,1))', borderTop: '1px solid rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.03)', position: 'relative' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '2.5rem', fontWeight: 600 }}>Trusted by Industry Leaders</p>
+        </div>
+        
+        {/* Edge Fade Masks */}
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '20%', height: '100%', background: 'linear-gradient(90deg, rgba(5,5,5,1), transparent)', zIndex: 5, pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: 0, right: 0, width: '20%', height: '100%', background: 'linear-gradient(-90deg, rgba(5,5,5,1), transparent)', zIndex: 5, pointerEvents: 'none' }}></div>
+
+        <div style={{ display: 'flex', whiteSpace: 'nowrap', position: 'relative' }}>
+          <motion.div 
+            animate={{ x: ["-50%", "0%"] }}
+            transition={{ ease: "linear", duration: 35, repeat: Infinity }}
+            style={{ display: 'flex', gap: '5rem', fontSize: '3rem', fontFamily: 'Outfit', fontWeight: 800, textTransform: 'uppercase', color: '#ffffff', opacity: 0.15 }}
+          >
+            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "NoStrain", "Nutrabud", "XStep", "Palladium"].map((brand, i) => (
+              <span key={`b1-${i}`} style={{ letterSpacing: '1px' }}>{brand}</span>
+            ))}
+            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "NoStrain", "Nutrabud", "XStep", "Palladium"].map((brand, i) => (
+              <span key={`b2-${i}`} style={{ letterSpacing: '1px' }}>{brand}</span>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -268,5 +297,10 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </div>
+    <div className="mobile-only">
+      <MobileHome />
+    </div>
+    </>
   );
 }

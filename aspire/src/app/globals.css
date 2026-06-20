@@ -385,3 +385,17 @@ a {
   padding: 6rem 0 2rem;
   background: radial-gradient(circle at bottom center, rgba(255, 215, 0, 0.03) 0%, var(--bg-black) 50%);
 }
+/* Mobile/Desktop Visibility Utilities */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 1024px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+}
+.nav-link-modern { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #bbb; position: relative; transition: color 0.2s ease; z-index: 1; } .nav-link-modern:hover { color: #fff; }
+
+
+/* Horizontal Scroll Container - Advanced Look */
+.horizontal-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+.horizontal-scroll::-webkit-scrollbar { display: none; }

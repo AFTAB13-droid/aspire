@@ -51,15 +51,28 @@ export default function ContactPage() {
           <div>
             <div className="glass-card" style={{ marginBottom: '2rem', padding: '2rem' }}>
               <h3 className="card-title" style={{ fontSize: '1.25rem', color: 'var(--primary-yellow)' }}>Email Us</h3>
-              <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>hello@aspiremint.com</p>
+              <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>info@aspiremint.in</p>
               <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>For general inquiries & partnerships</p>
             </div>
 
             <div className="glass-card" style={{ marginBottom: '2rem', padding: '2rem' }}>
-              <h3 className="card-title" style={{ fontSize: '1.25rem', color: '#25D366' }}>WhatsApp</h3>
-              <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>+1 (234) 567-8900</p>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="btn-premium" style={{ borderColor: '#25D366', color: '#25D366', width: '100%', marginTop: '1rem' }}>
-                Chat Now
+              <h3 className="card-title" style={{ fontSize: '1.25rem', color: '#25D366' }}>Phone / WhatsApp</h3>
+              <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>+91 6289 183 844</p>
+              <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+                <a href="tel:+916289183844" className="btn-premium" style={{ borderColor: 'var(--primary-yellow)', color: 'var(--primary-yellow)', width: '100%', padding: '0.8rem' }}>
+                  Call
+                </a>
+                <a href="https://wa.me/916289183844" target="_blank" rel="noreferrer" className="btn-premium" style={{ borderColor: '#25D366', color: '#25D366', width: '100%', padding: '0.8rem' }}>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="glass-card" style={{ marginBottom: '2rem', padding: '2rem' }}>
+              <h3 className="card-title" style={{ fontSize: '1.25rem', color: '#E1306C' }}>Instagram</h3>
+              <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }}>@aspiremint</p>
+              <a href="https://instagram.com/aspiremint" target="_blank" rel="noreferrer" className="btn-premium" style={{ borderColor: '#E1306C', color: '#E1306C', width: '100%', marginTop: '1rem', padding: '0.8rem' }}>
+                Follow Us
               </a>
             </div>
           </div>
@@ -80,29 +93,29 @@ export default function ContactPage() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label className="form-label" htmlFor="name">Full Name</label>
-                <input type="text" id="name" name="name" className="form-control" placeholder="John Doe" required style={{ background: 'rgba(0,0,0,0.5)' }} />
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div>
+                <label htmlFor="name" style={{ display: 'block', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600 }}>Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required style={{ width: '100%', padding: '1.2rem 1.5rem', background: 'rgba(10, 10, 10, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', color: '#fff', fontSize: '1rem', outline: 'none', transition: 'border-color 0.3s ease', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.5)' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-yellow)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)'} />
               </div>
               
-              <div className="form-group">
-                <label className="form-label" htmlFor="email">Email Address</label>
-                <input type="email" id="email" name="email" className="form-control" placeholder="john@company.com" required style={{ background: 'rgba(0,0,0,0.5)' }} />
+              <div>
+                <label htmlFor="email" style={{ display: 'block', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600 }}>Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required style={{ width: '100%', padding: '1.2rem 1.5rem', background: 'rgba(10, 10, 10, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', color: '#fff', fontSize: '1rem', outline: 'none', transition: 'border-color 0.3s ease', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.5)' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-yellow)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)'} />
               </div>
 
-              <div className="form-group">
-                <label className="form-label" htmlFor="brand">Brand Name</label>
-                <input type="text" id="brand" name="brand" className="form-control" placeholder="Your Brand Ltd." style={{ background: 'rgba(0,0,0,0.5)' }} />
+              <div>
+                <label htmlFor="brand" style={{ display: 'block', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600 }}>Brand Name</label>
+                <input type="text" id="brand" name="brand" placeholder="Your Brand Ltd." style={{ width: '100%', padding: '1.2rem 1.5rem', background: 'rgba(10, 10, 10, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', color: '#fff', fontSize: '1rem', outline: 'none', transition: 'border-color 0.3s ease', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.5)' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-yellow)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)'} />
               </div>
               
-              <div className="form-group">
-                <label className="form-label" htmlFor="message">How can we help?</label>
-                <textarea id="message" name="message" className="form-control" placeholder="Tell us about your goals..." required style={{ background: 'rgba(0,0,0,0.5)' }}></textarea>
+              <div>
+                <label htmlFor="message" style={{ display: 'block', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600 }}>How can we help?</label>
+                <textarea id="message" name="message" rows={5} placeholder="Tell us about your goals..." required style={{ width: '100%', padding: '1.2rem 1.5rem', background: 'rgba(10, 10, 10, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', color: '#fff', fontSize: '1rem', outline: 'none', transition: 'border-color 0.3s ease', resize: 'vertical', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.5)' }} onFocus={(e) => e.target.style.borderColor = 'var(--primary-yellow)'} onBlur={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)'}></textarea>
               </div>
               
-              <button type="submit" className="btn-premium" style={{ width: '100%', marginTop: '1rem', background: status === 'loading' ? '#333' : 'var(--primary-yellow)', color: status === 'loading' ? '#fff' : 'var(--bg-black)' }} disabled={status === 'loading'}>
-                {status === 'loading' ? 'Sending...' : 'Submit Inquiry'}
+              <button type="submit" className="btn-premium" style={{ width: '100%', marginTop: '1rem', padding: '1.2rem', fontSize: '1rem', borderRadius: '12px', justifyContent: 'center' }} disabled={status === 'loading'}>
+                {status === 'loading' ? 'SENDING...' : 'SUBMIT INQUIRY'}
               </button>
             </form>
           </div>

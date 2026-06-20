@@ -42,15 +42,21 @@ export default function RootLayout({
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <li><Link href="/" style={{ color: 'var(--text-secondary)' }}>Home</Link></li>
                   <li><Link href="/about" style={{ color: 'var(--text-secondary)' }}>About Us</Link></li>
-                  <li><Link href="/services" style={{ color: 'var(--text-secondary)' }}>Our Services</Link></li>
-                  <li><Link href="/contact" style={{ color: 'var(--text-secondary)' }}>Contact</Link></li>
+                  <li><Link href="/services" style={{ color: 'var(--text-secondary)' }}>Services</Link></li>
+                  <li><Link href="/marketplaces" style={{ color: 'var(--text-secondary)' }}>Marketplaces</Link></li>
+                  <li><Link href="/why-aspiremint" style={{ color: 'var(--text-secondary)' }}>Why AspireMint</Link></li>
+                  <li><Link href="/clients" style={{ color: 'var(--text-secondary)' }}>Clients</Link></li>
+                  <li><Link href="/success-stories" style={{ color: 'var(--text-secondary)' }}>Success Stories</Link></li>
+                  <li><Link href="/testimonials" style={{ color: 'var(--text-secondary)' }}>Testimonials</Link></li>
+                  <li><Link href="/contact" style={{ color: 'var(--text-secondary)' }}>Contact Us</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 style={{ color: '#fff', marginBottom: '1.5rem' }}>Get in Touch</h4>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <li style={{ color: 'var(--text-secondary)' }}>hello@aspiremint.com</li>
-                  <li style={{ color: 'var(--text-secondary)' }}>+1 234 567 8900</li>
+                  <li style={{ color: 'var(--text-secondary)' }}><a href="mailto:info@aspiremint.in">info@aspiremint.in</a></li>
+                  <li style={{ color: 'var(--text-secondary)' }}><a href="tel:+916289183844">+91 6289 183 844</a></li>
+                  <li style={{ color: 'var(--text-secondary)' }}><a href="https://instagram.com/aspiremint" target="_blank" rel="noreferrer">Instagram: @aspiremint</a></li>
                   <li style={{ color: 'var(--text-secondary)' }}>Global Remote Agency</li>
                 </ul>
               </div>

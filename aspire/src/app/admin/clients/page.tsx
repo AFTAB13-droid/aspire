@@ -104,7 +104,7 @@ export default function ClientsPage() {
             />
           </div>
           <div style={{ color: '#888', fontSize: '0.9rem' }}>
-            Total MRR: <strong style={{ color: '#fff', fontSize: '1.2rem' }}>${totalMRR.toLocaleString()}</strong>
+            Total MRR: <strong style={{ color: '#fff', fontSize: '1.2rem' }}>₹{totalMRR.toLocaleString()}</strong>
           </div>
         </div>
 
@@ -194,7 +194,7 @@ export default function ClientsPage() {
                     </select>
                   </div>
                   <div style={{ flex: 1 }}>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', color: '#888' }}>MRR (e.g. $5,000)</label>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', color: '#888' }}>MRR (e.g. ₹5,000)</label>
                     <input type="text" required value={formData.mrr} onChange={e => setFormData({...formData, mrr: e.target.value})} style={{ width: '100%', padding: '0.75rem', background: '#000', border: '1px solid #333', color: '#fff', borderRadius: '6px' }} />
                   </div>
                 </div>
