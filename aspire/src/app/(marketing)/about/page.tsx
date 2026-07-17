@@ -36,7 +36,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+          <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '6rem' }}>
             <div className="card" style={{ padding: '3rem' }}>
               <h3 className="card-title" style={{ color: 'var(--primary-yellow)', fontSize: '2rem' }}>Our Mission</h3>
               <p className="card-text" style={{ fontSize: '1.1rem' }}>
@@ -49,6 +49,25 @@ export default function AboutPage() {
                 To be the most trusted growth partner for emerging and established brands, setting the standard for marketplace marketing globally.
               </p>
             </div>
+          </div>
+
+          {/* New Data & Stats Section */}
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 className="section-title">The Data Behind <span className="text-gradient-yellow">AspireMint</span></h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>Numbers speak louder than words. Here is the scale at which we operate.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '6rem' }}>
+            {[
+              { number: "₹50Cr+", label: "Client Revenue Generated" },
+              { number: "120+", label: "Brands Scaled" },
+              { number: "98%", label: "Client Retention Rate" },
+              { number: "5M+", label: "Reviews Managed" }
+            ].map((stat, idx) => (
+              <div key={idx} style={{ background: 'var(--surface-black)', padding: '3rem 2rem', borderRadius: '16px', textAlign: 'center', border: '1px solid rgba(255,215,0,0.1)' }}>
+                <div style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--primary-yellow)', fontFamily: 'Outfit', marginBottom: '1rem' }}>{stat.number}</div>
+                <div style={{ color: '#aaa', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
