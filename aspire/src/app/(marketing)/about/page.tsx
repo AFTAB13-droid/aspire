@@ -69,6 +69,27 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+          </div>
+
+          {/* Unique Core DNA Bento Grid */}
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 className="section-title">Our <span className="text-gradient-yellow">Core DNA</span></h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>What makes AspireMint completely different from traditional marketing agencies.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '1.5rem', marginBottom: '4rem' }}>
+            <div className="glass-card" style={{ gridColumn: 'span 8', padding: '3rem', background: 'linear-gradient(135deg, rgba(20,20,20,0.8), rgba(5,5,5,0.9))' }}>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#fff' }}>1. Algorithm-First Engineering</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6 }}>We don't guess. We reverse-engineer the A9 (Amazon) and Flipkart search algorithms. We know exactly which keywords trigger visibility and how to manipulate conversion rates to force organic ranking.</p>
+            </div>
+            <div className="glass-card" style={{ gridColumn: 'span 4', padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#fff' }}>2. Zero BS</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6 }}>No vanity metrics. No "brand awareness" fluff. If it doesn't generate ROI or directly improve your conversion rate, we don't do it.</p>
+            </div>
+            <div className="glass-card" style={{ gridColumn: 'span 12', padding: '3rem', border: '1px solid rgba(255,215,0,0.2)', background: 'rgba(255,215,0,0.02)' }}>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--primary-yellow)' }}>3. The Growth Ecosystem</h3>
+              <p style={{ color: '#fff', fontSize: '1.1rem', lineHeight: 1.6, maxWidth: '800px' }}>While other agencies focus on just one thing, we build a flywheel. Influencer traffic drives sales, sales drive algorithm ranking, ranking drives organic traffic, and managed reviews drive conversions. It's a closed-loop system designed for absolute market dominance.</p>
+            </div>
+          </div>
         </div>
       </section>
     </>
