@@ -69,8 +69,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          </div>
-
 
           {/* Unique Core DNA Bento Grid */}
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
