@@ -118,10 +118,10 @@ export default function MobileHome() {
             transition={{ ease: "linear", duration: 25, repeat: Infinity }}
             style={{ display: 'flex', gap: '3rem', fontSize: '2.2rem', fontFamily: 'Outfit', fontWeight: 800, textTransform: 'uppercase', color: '#ffffff', opacity: 0.15 }}
           >
-            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Nutrabud"].map((brand, i) => (
+            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "X tep", "Moonstruck", "Fuaark", "Nutrabud"].map((brand, i) => (
               <span key={`mb1-${i}`}>{brand}</span>
             ))}
-            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Nutrabud"].map((brand, i) => (
+            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "X tep", "Moonstruck", "Fuaark", "Nutrabud"].map((brand, i) => (
               <span key={`mb2-${i}`}>{brand}</span>
             ))}
           </motion.div>

@@ -239,10 +239,10 @@ export default function Home() {
             transition={{ ease: "linear", duration: 35, repeat: Infinity }}
             style={{ display: 'flex', gap: '5rem', fontSize: '3rem', fontFamily: 'Outfit', fontWeight: 800, textTransform: 'uppercase', color: '#ffffff', opacity: 0.15 }}
           >
-            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "NoStrain", "Nutrabud", "XStep", "Palladium"].map((brand, i) => (
+            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "NoStrain", "Nutrabud", "X tep", "Palladium", "Moonstruck", "Fuaark", "Purela"].map((brand, i) => (
               <span key={`b1-${i}`} style={{ letterSpacing: '1px' }}>{brand}</span>
             ))}
-            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "NoStrain", "Nutrabud", "XStep", "Palladium"].map((brand, i) => (
+            {["Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", "Flyberry", "NoStrain", "Nutrabud", "X tep", "Palladium", "Moonstruck", "Fuaark", "Purela"].map((brand, i) => (
               <span key={`b2-${i}`} style={{ letterSpacing: '1px' }}>{brand}</span>
             ))}
           </motion.div>

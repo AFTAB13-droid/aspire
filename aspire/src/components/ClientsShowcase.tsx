@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const brands = [
   "Del Monte", "American Tourister", "Pilgrim", "pTron", "XECH", 
-  "Flyberry", "NoStrain", "Nutrabud", "XStep", "Palladium", 
+  "Flyberry", "NoStrain", "Nutrabud", "X tep", "Palladium", 
   "Avni", "Paradyse Perfume", "Fuaark", "HealthOxide", "Shrida", 
-  "Moonstruck", "Koparo"
+  "Moonstruck", "Koparo", "Purela"
 ];
 
 const containerVariants = {
